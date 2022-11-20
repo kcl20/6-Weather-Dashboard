@@ -1,0 +1,78 @@
+:root {
+    --forest_green: #185241;;
+    --midnight_blue: #0A1D2D; 
+    --light_blue: #788585;
+    --border-radius: .3rem;
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+  
+  header {
+    background-color: var(--forest_green);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  body {
+    background-color: ;
+    margin: 0;
+    padding: 0;
+    color: ;
+    line-height: ;
+    font-size: 16px;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.25;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  #citySearch {
+    width: 95%;
+
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+  
+  #searchSidePanel {
+  text-align: center;
+  }
+
+
+  .btn {
+    font-size: 1.3rem;
+    text-decoration:none;
+    padding: 6px 5px;
+    width: 96%;
+    display: block;
+    margin: 10px;
+    border-radius: var(--border-radius);
+    color: white;
+    border: none;
+    outline: none;
+    background-color: var(--forest_green);
+    box-shadow: 3px 3px var(--dark);
+  }
+  
+   .btn:hover {
+    color: var(--primary);
+    background-color: var(--light_blue);
+    box-shadow: 2px 2px var(--dark);
+  }
+  
+
+
