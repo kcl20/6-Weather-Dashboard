@@ -36,29 +36,35 @@
         <div id="searchSidePanel" class="col-12 col-lg-3 border bg-light">
           <h1>Search for a City:</h1>
           <form>
-            <input class="citySearch" type="text" id="citySearch" name="citySearch" placeholder="Toronto">
+            <input class="citySearch" type="text" id="citySearch" placeholder="Toronto">
             <button type="submit" id="searchButton" class="btn btn-primary">Search</button>
             </form>
           <hr> 
           </div>
 
-        <div name="Weather" class="col-12 col-lg-9 border bg-light border">
-          <h1>City (Today's Date)</h1>
-          <div class="row border">
-            <div class="col-12 col-lg-3 border">
-              Day 1
-            </div>
-            <div class="col-12 col-lg-3 border">
-              Day 2
-            </div>
-            <div class="col-12 col-lg-3 border">
-              Day 3
-            </div>
-            <div class="col-12 col-lg-3 border">
-              Day 4
-            </div>
-            <div class="col-12 col-lg-3 border">
-              Day 5
+        <div id="weatherPanel" class="col-12 col-lg-9 border bg-light border">
+          
+          <div id="Current Weather">
+            <h1>City (Today's Date)</h1>
+          </div>
+         
+          <div id="5 Day Forecast" class="container">
+            <div class="row border">
+              <div class="col-12 col-lg-2 border">
+                Day 1
+              </div>
+              <div class="col-12 col-lg-2 border">
+                Day 2
+              </div>
+              <div class="col-12 col-lg-2 border">
+                Day 3
+              </div>
+              <div class="col-12 col-lg-2 border">
+                Day 4
+              </div>
+              <div class="col-12 col-lg-2 border">
+                Day 5
+              </div>
             </div>
           </div>
         </div>
@@ -85,7 +91,7 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"
   ></script>
-  <script src="./assets/js/script.js"></script>
+  <script src="./Assets/js/script.js"></script>
 </body>
 
 </html>
