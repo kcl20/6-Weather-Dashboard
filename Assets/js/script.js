@@ -202,11 +202,16 @@ searchButton.addEventListener("click", function() {
 
 var newButton = document.createElement("button");
 var cityList = document.getElementById("cityList");
+var savedCity = city;
 cityList.append(newButton);
 newButton.setAttribute("class", "btn btn-primary");
-newButton.textContent = city;
-
+newButton.textContent = savedCity;
+newButton.addEventListener("click", function() {
+    event.preventDefault();
+    console.log("clicked" + savedCity);
+    
+    getLatLong(savedCity);
     });
 
 
-
+});
