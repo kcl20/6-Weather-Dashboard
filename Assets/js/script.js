@@ -54,7 +54,7 @@ function loadCurrentWeather(data) {
     var currentHumidity = data.main.humidity;
     var currentWindSpeed = data.wind.speed;
 
-    var currentWeather = document.getElementById("Current Weather");
+    var currentWeather = document.getElementById("currentWeatherContent");
     var currentWeatherHeader = document.getElementById("currentWeatherHeader");
     var currentIconEl = document.createElement("img");
     var currentTempEl = document.createElement("p");
@@ -191,6 +191,7 @@ function load5DayForecast(data) {
 // Event listener for search button
 searchButton.addEventListener("click", function() {
     event.preventDefault();
+    clearWeather();
 
     var city = searchInput.value;
     if (city==="") {
@@ -200,18 +201,42 @@ searchButton.addEventListener("click", function() {
     console.log("Search for " + city);
   getLatLong(city);
 
+  // add the city as new button
 var newButton = document.createElement("button");
 var cityList = document.getElementById("cityList");
 var savedCity = city;
 cityList.append(newButton);
 newButton.setAttribute("class", "btn btn-primary");
 newButton.textContent = savedCity;
+// add event listener to trigger search if button is clicked
 newButton.addEventListener("click", function() {
     event.preventDefault();
     console.log("clicked" + savedCity);
-    
+    clearWeather();
     getLatLong(savedCity);
     });
 
 
 });
+
+
+
+
+function clearWeather() {
+
+    let currentWeatherDiv = document.getElementById('currentWeatherContent');
+    currentWeatherDiv.innerHTML = '';
+
+    let day1 = document.getElementById('day1Card');
+    day1.innerHTML = '';
+    let day2 = document.getElementById('day2Card');
+    day2.innerHTML = '';
+    let day3 = document.getElementById('day3Card');
+    day3.innerHTML = '';
+    let day4 = document.getElementById('day4Card');
+    day4.innerHTML = '';
+    let day5 = document.getElementById('day5Card');
+    day5.innerHTML = '';
+}
+  
+
