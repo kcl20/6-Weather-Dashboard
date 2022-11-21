@@ -191,12 +191,22 @@ function load5DayForecast(data) {
 // Event listener for search button
 searchButton.addEventListener("click", function() {
     event.preventDefault();
-    var city = searchInput.value;
 
+    var city = searchInput.value;
     if (city==="") {
         alert("Please enter a city");
         return;}
     console.log("click");
     console.log("Search for " + city);
   getLatLong(city);
-});
+
+var newButton = document.createElement("button");
+var cityList = document.getElementById("cityList");
+cityList.append(newButton);
+newButton.setAttribute("class", "btn btn-primary");
+newButton.textContent = city;
+
+    });
+
+
+
