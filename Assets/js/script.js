@@ -6,7 +6,7 @@ var searchButton = document.getElementById('searchButton');
 function getLatLong(city) {
     console.log("looking up lat/long for " + city);
     localStorage.setItem("city", city);
-    var geoURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=9ca09e5fa97a5b754fdff55f82acba19";
+    var geoURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=9ca09e5fa97a5b754fdff55f82acba19";
     fetch(geoURL)
     .then(function(response) {
         return response.json();
@@ -73,7 +73,7 @@ function loadCurrentWeather(data) {
 function get5DayForecast (lat, lon) {
     console.log("looking up 5 day weather for " + lat + ", " + lon);
 
-    var weather5DayForecastURL = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&cnt=5&appid=9ca09e5fa97a5b754fdff55f82acba19&units=metric";
+    var weather5DayForecastURL = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&cnt=5&appid=9ca09e5fa97a5b754fdff55f82acba19&units=metric";
     fetch(weather5DayForecastURL)
     .then(function(response) {
         return response.json();
