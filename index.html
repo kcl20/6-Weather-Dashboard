@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Karla&family=Rubik:wght@700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Weather Dashboard</title>
@@ -33,19 +34,19 @@
   <main class="px-2 bg-dark border">
       <div class="row">
 
-        <div id="searchSidePanel" class="col-12 col-lg-3 border bg-light">
+        <div id="searchSidePanel" class="col-12 col-lg-3 bg-light">
           <h1>Search for a City:</h1>
           <form>
             <input class="citySearch" type="text" id="citySearch" placeholder="Toronto">
-            <button type="submit" id="searchButton" class="btn btn-primary">Search</button>
+            <button type="submit" id="searchButton" class="btn">Search</button>
             </form>
           <hr> 
           <div id="cityList"></div>
           </div>
 
-        <div id="weatherPanel" class="col-12 col-lg-9 border bg-light border">
+        <div id="weatherPanel" class="col-12 col-lg-9 bg-light px-4">
           
-          <div id="currentWeatherCard" class="border border-3">
+          <div id="currentWeatherCard" class="border border-3 px-3">
             <h1 id="currentWeatherHeader">Current Weather</h1>
             <div id="currentWeatherContent"></div>
           </div>
@@ -53,11 +54,11 @@
           <div id="5 Day Forecast">
             <div class="row justify-content-between px-2">
               <h1>Five Day Forecast</h1>
-              <div id="day1Card" class="col-12 col-lg-2 border" style="display:none"></div>
-              <div id="day2Card" class="col-12 col-lg-2 border" style="display:none"></div>
-              <div id="day3Card" class="col-12 col-lg-2 border" style="display:none"></div>
-              <div id="day4Card" class="col-12 col-lg-2 border" style="display:none"></div>
-              <div id="day5Card" class="col-12 col-lg-2 border" style="display:none"></div>
+              <div id="day1Card" class="col-12 col-lg-2 border daycard" style="display:none"></div>
+              <div id="day2Card" class="col-12 col-lg-2 border daycard" style="display:none"></div>
+              <div id="day3Card" class="col-12 col-lg-2 border daycard" style="display:none"></div>
+              <div id="day4Card" class="col-12 col-lg-2 border daycard" style="display:none"></div>
+              <div id="day5Card" class="col-12 col-lg-2 border daycard" style="display:none"></div>
             </div>
           </div>
         </div>

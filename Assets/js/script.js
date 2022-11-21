@@ -1,7 +1,8 @@
+// declare  variables
 var searchInput = document.getElementById("citySearch");
 var searchButton = document.getElementById('searchButton');
 
-
+// lookup lat and long based on city, pass onto other functions
 function getLatLong(city) {
     console.log("looking up lat/long for " + city);
     localStorage.setItem("city", city);
@@ -18,12 +19,12 @@ function getLatLong(city) {
         get5DayForecast(lat, lon);
     })
     // todo: add validation if city not found
-    // todo:  add validation if error (status not 200)
+    // todo: add validation if error (status not 200)
 }
 
+// get lat and long, lookup current weather
 function getCurrentWeather(lat, lon) {
     console.log("looking up weather for " + lat + ", " + lon);
-
     var currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=9ca09e5fa97a5b754fdff55f82acba19&units=metric";
     fetch(currentWeatherURL)
     .then(function(response) {
@@ -37,16 +38,12 @@ function getCurrentWeather(lat, lon) {
         } else {
             loadCurrentWeather(data);
         }
-    })
-
-
-    
+    }) 
 }
 
+// create elements for current weather
 function loadCurrentWeather(data) {
-
     console.log("loading current weather for " + data.name);
-
     var cityName = data.name;
     var currentDate = dayjs().format("MM/DD/YYYY");
     var currentIcon = data.weather[0].icon;
@@ -61,7 +58,6 @@ function loadCurrentWeather(data) {
     var currentHumidityEl = document.createElement("p");
     var currentWindSpeedEl = document.createElement("p");
     
- 
     currentWeatherHeader.textContent = cityName + " (" + currentDate + ")";
     currentWeatherHeader.appendChild(currentIconEl);
     currentIconEl.setAttribute("src", "http://openweathermap.org/img/wn/" + currentIcon + ".png");
@@ -71,10 +67,9 @@ function loadCurrentWeather(data) {
     currentHumidityEl.textContent = "Humidity: " + currentHumidity + "%";
     currentWeather.appendChild(currentWindSpeedEl);
     currentWindSpeedEl.textContent = "Wind Speed: " + currentWindSpeed + " KPH";
-
 }
 
-
+// lookup 5 day forecast
 function get5DayForecast (lat, lon) {
     console.log("looking up 5 day weather for " + lat + ", " + lon);
 
@@ -89,10 +84,7 @@ function get5DayForecast (lat, lon) {
     })
 }
 
-
-
-
-
+// create elements for 5 day forecast
 function load5DayForecast(data) {
     var day1 = document.getElementById("day1Card");
     day1.setAttribute("style", "display: block");
@@ -183,16 +175,14 @@ function load5DayForecast(data) {
     day5Temp.textContent = "Temp: " + data.list[4].main.temp + "°C";
     day5Wind.textContent = "Wind: " + data.list[4].wind.speed + " KPH";
     day5Humidity.textContent = "Humidity: " + data.list[4].main.humidity + "%";
-
-
 }
 
 
 // Event listener for search button
 searchButton.addEventListener("click", function() {
     event.preventDefault();
+    // clear previous weather data
     clearWeather();
-
     var city = searchInput.value;
     if (city==="") {
         alert("Please enter a city");
@@ -206,7 +196,7 @@ var newButton = document.createElement("button");
 var cityList = document.getElementById("cityList");
 var savedCity = city;
 cityList.append(newButton);
-newButton.setAttribute("class", "btn btn-primary");
+newButton.setAttribute("class", "btn btn-secondary");
 newButton.textContent = savedCity;
 // add event listener to trigger search if button is clicked
 newButton.addEventListener("click", function() {
@@ -215,13 +205,11 @@ newButton.addEventListener("click", function() {
     clearWeather();
     getLatLong(savedCity);
     });
-
-
 });
 
 
 
-
+// clear previous weather data
 function clearWeather() {
 
     let currentWeatherDiv = document.getElementById('currentWeatherContent');

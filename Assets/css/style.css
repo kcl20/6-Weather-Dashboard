@@ -1,7 +1,7 @@
 :root {
     --forest_green: #185241;;
     --midnight_blue: #0A1D2D; 
-    --light_blue: #788585;
+    --light_grey: #788585;
     --border-radius: .3rem;
   }
   
@@ -65,14 +65,23 @@
     border: none;
     outline: none;
     background-color: var(--forest_green);
-    box-shadow: 3px 3px var(--dark);
+
   }
   
    .btn:hover {
-    color: var(--primary);
-    background-color: var(--light_blue);
-    box-shadow: 2px 2px var(--dark);
+    background-color: var(--light_grey);
   }
-  
 
+  .btn:active{
+    background-color: var(--midnight_blue);
+    }
 
+  .btn-secondary {
+    background-color: var(--light_grey);
+ 
+  }
+
+  .daycard {
+    background-color: var(--midnight_blue);
+    color: white;
+  }
