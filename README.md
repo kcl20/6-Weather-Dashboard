@@ -20,9 +20,9 @@ n/a
 
 The following image shows the web application's appearance and functionality:
 
-![screenshot](./Assets/5 day weather dashboard.png?raw=true, "screenshot")
+![screenshot](/Assets/5 day weather dashboard.png?raw=true, "screenshot")
 
-[repo link] (https://github.com/kcl20/6-Weather-Dashboard)
+[repo link](https://github.com/kcl20/6-Weather-Dashboard)
 
 ## Credits
 
