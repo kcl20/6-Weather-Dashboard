@@ -60,7 +60,7 @@ function loadCurrentWeather(data) {
     
     currentWeatherHeader.textContent = cityName + " (" + currentDate + ")";
     currentWeatherHeader.appendChild(currentIconEl);
-    currentIconEl.setAttribute("src", "http://openweathermap.org/img/wn/" + currentIcon + ".png");
+    currentIconEl.setAttribute("src", "https://openweathermap.org/img/wn/" + currentIcon + ".png");
     currentWeather.appendChild(currentTempEl);
     currentTempEl.textContent = "Temperature: " + currentTemp + "°C";
     currentWeather.appendChild(currentHumidityEl);
@@ -99,7 +99,7 @@ function load5DayForecast(data) {
     day1.appendChild(day1Wind);
     day1.appendChild(day1Humidity);
     day1Date.textContent = dayjs().add(1, 'day').format("MM/DD/YYYY");
-    day1Icon.setAttribute("src", "http://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + ".png");
+    day1Icon.setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + ".png");
     day1Temp.textContent = "Temp: " + data.list[0].main.temp + "°C";
     day1Wind.textContent = "Wind: " + data.list[0].wind.speed + " KPH";
     day1Humidity.textContent = "Humidity: " + data.list[0].main.humidity + "%";
@@ -117,7 +117,7 @@ function load5DayForecast(data) {
     day2.appendChild(day2Wind);
     day2.appendChild(day2Humidity);
     day2Date.textContent = dayjs().add(2, 'day').format("MM/DD/YYYY");
-    day2Icon.setAttribute("src", "http://openweathermap.org/img/wn/" + data.list[1].weather[0].icon + ".png");
+    day2Icon.setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[1].weather[0].icon + ".png");
     day2Temp.textContent = "Temp: " + data.list[1].main.temp + "°C";
     day2Wind.textContent = "Wind: " + data.list[1].wind.speed + " KPH";
     day2Humidity.textContent = "Humidity: " + data.list[1].main.humidity + "%";
@@ -135,7 +135,7 @@ function load5DayForecast(data) {
     day3.appendChild(day3Wind);
     day3.appendChild(day3Humidity);
     day3Date.textContent = dayjs().add(3, 'day').format("MM/DD/YYYY");
-    day3Icon.setAttribute("src", "http://openweathermap.org/img/wn/" + data.list[2].weather[0].icon + ".png");
+    day3Icon.setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[2].weather[0].icon + ".png");
     day3Temp.textContent = "Temp: " + data.list[2].main.temp + "°C";
     day3Wind.textContent = "Wind: " + data.list[2].wind.speed + " KPH";
     day3Humidity.textContent = "Humidity: " + data.list[2].main.humidity + "%";
@@ -153,7 +153,7 @@ function load5DayForecast(data) {
     day4.appendChild(day4Wind);
     day4.appendChild(day4Humidity);
     day4Date.textContent = dayjs().add(4, 'day').format("MM/DD/YYYY");
-    day4Icon.setAttribute("src", "http://openweathermap.org/img/wn/" + data.list[3].weather[0].icon + ".png");
+    day4Icon.setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[3].weather[0].icon + ".png");
     day4Temp.textContent = "Temp: " + data.list[3].main.temp + "°C";
     day4Wind.textContent = "Wind: " + data.list[3].wind.speed + " KPH";
     day4Humidity.textContent = "Humidity: " + data.list[3].main.humidity + "%";
@@ -171,7 +171,7 @@ function load5DayForecast(data) {
     day5.appendChild(day5Wind);
     day5.appendChild(day5Humidity);
     day5Date.textContent = dayjs().add(5, 'day').format("MM/DD/YYYY");
-    day5Icon.setAttribute("src", "http://openweathermap.org/img/wn/" + data.list[4].weather[0].icon + ".png");
+    day5Icon.setAttribute("src", "https://openweathermap.org/img/wn/" + data.list[4].weather[0].icon + ".png");
     day5Temp.textContent = "Temp: " + data.list[4].main.temp + "°C";
     day5Wind.textContent = "Wind: " + data.list[4].wind.speed + " KPH";
     day5Humidity.textContent = "Humidity: " + data.list[4].main.humidity + "%";
