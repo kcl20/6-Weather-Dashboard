@@ -44,27 +44,18 @@
 
         <div id="weatherPanel" class="col-12 col-lg-9 border bg-light border">
           
-          <div id="Current Weather">
-            
+          <div id="Current Weather" class="border border-3">
+            <h1 id="currentWeatherHeader">Current Weather</h1>
           </div>
-         
-          <div id="5 Day Forecast" class="container">
-            <div class="row border">
-              <div id="Day 1" class="col-12 col-lg-2 border" style="display:none">
-                
-              </div>
-              <div id="Day 2" class="col-12 col-lg-2 border" style="display:none">
-                
-              </div>
-              <div id="Day 3" class="col-12 col-lg-2 border" style="display:none">
-                
-              </div>
-              <div id="Day 4" class="col-12 col-lg-2 border" style="display:none">
-                
-              </div>
-              <div id="Day 5" class="col-12 col-lg-2 border" style="display:none">
-                
-              </div>
+         <br>
+          <div id="5 Day Forecast">
+            <div class="row justify-content-between px-2">
+              <h1>Five Day Forecast</h1>
+              <div id="day1Card" class="col-12 col-lg-2 border" style="display:none"></div>
+              <div id="day2Card" class="col-12 col-lg-2 border" style="display:none"></div>
+              <div id="day3Card" class="col-12 col-lg-2 border" style="display:none"></div>
+              <div id="day4Card" class="col-12 col-lg-2 border" style="display:none"></div>
+              <div id="day5Card" class="col-12 col-lg-2 border" style="display:none"></div>
             </div>
           </div>
         </div>
