@@ -45,25 +45,25 @@
         <div id="weatherPanel" class="col-12 col-lg-9 border bg-light border">
           
           <div id="Current Weather">
-            <h1>City (Today's Date)</h1>
+            
           </div>
          
           <div id="5 Day Forecast" class="container">
             <div class="row border">
-              <div class="col-12 col-lg-2 border">
-                Day 1
+              <div id="Day 1" class="col-12 col-lg-2 border" style="display:none">
+                
               </div>
-              <div class="col-12 col-lg-2 border">
-                Day 2
+              <div id="Day 2" class="col-12 col-lg-2 border" style="display:none">
+                
               </div>
-              <div class="col-12 col-lg-2 border">
-                Day 3
+              <div id="Day 3" class="col-12 col-lg-2 border" style="display:none">
+                
               </div>
-              <div class="col-12 col-lg-2 border">
-                Day 4
+              <div id="Day 4" class="col-12 col-lg-2 border" style="display:none">
+                
               </div>
-              <div class="col-12 col-lg-2 border">
-                Day 5
+              <div id="Day 5" class="col-12 col-lg-2 border" style="display:none">
+                
               </div>
             </div>
           </div>
@@ -83,7 +83,11 @@
     </main>
   
   
-
+  <script
+  src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+  integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+  crossorigin="anonymous"
+></script>
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
   <script
